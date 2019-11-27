@@ -1,18 +1,14 @@
 <?php
 
-$items[0] = "Camiseta fressetes";
-$items[1] = "Camiseta tigre";
-$items[2] = "Camiseta Polaroid";
-$items[3] = "Camiseta HAPPY";
-$items[4] = "Camiseta Powe Girl";
-$items[5] = "Camiseta Rayo";
-
-$colors[0] = "groc";
-$colors[1] = "rosa";
-$colors[2] = "negre";
-$colors[3] = "groc";
-$colors[4] = "negre";
-$colors[5] = "rosa";
+$items = array
+(
+    array("Camiseta fressetes",10),
+    array("Camiseta tigre",15),
+    array("Camiseta Polaroid",10),
+    array("Camiseta HAPPY",5),
+    array("Camiseta Powe Girl",5),
+    array("Camiseta Rayo",10)
+);
 
 ?>
 
@@ -33,9 +29,10 @@ $colors[5] = "rosa";
 
     <div class="card m-1" style="width: 18rem;">
         <img class="card-img-top" src="img/<?php echo $x ?>.webp" alt="Card image cap">
-        <div class="card-body">
-            <p class="card-text"><?php echo $items[$x] ?></p>
-            <a href="producte.php" class="btn btn-primary">Selecciona</a>
+        <div class="card-body text-center">
+            <p class="card-text"><?php echo $items[$x][0] ?></p>
+            <p class="card-text"><?php echo $items[$x][1] ?> €</p>
+            <a href="cart.php" class="btn btn-primary">Selecciona</a>
 
         </div>
     </div>
